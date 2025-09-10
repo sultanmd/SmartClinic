@@ -1,11 +1,13 @@
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
 
 export default defineConfig({
-  // 👇 Add this line
-  base: "",
+  // 👇 Correctly add this line with an EMPTY string
+  base: '', // <-- This is correct (two single quotes, no space)
+  // OR: base: "", // This is also correct (two double quotes, no space)
   plugins: [
     react(),
     runtimeErrorOverlay(),
